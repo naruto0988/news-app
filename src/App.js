@@ -8,7 +8,7 @@ function App() {
   const { loginWithRedirect, isAuthenticated } = useAuth0();
   return (
     <>
-      <div style={{ width: '100%', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
         {!isAuthenticated && <div><h1> News Login</h1><button onClick={() => { loginWithRedirect() }}>Login</button></div>}
         {isAuthenticated && <HomePage />}
       </div>
